@@ -1,0 +1,117 @@
+/* Base Styles */ 
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font: 1.2em/1.4 Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 0 0 1em;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    border: 5px solid #000;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+}
+
+header .title {
+    font-size: 150%;
+    font-style: italic;
+    font-weight: bold;
+    padding: 1em;
+}
+
+header nav{
+    grid-column: 4;
+    width: fit-content;
+}
+
+header ul {
+    list-style: none;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 0.5em 1em;
+    border-top: 1px solid #999;
+}
+
+
+/* Main CSS Styling */
+main {
+    padding: 0 1em;
+    display: flex;
+}
+
+.cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cards li {
+    border: 5px solid #000;
+    margin-bottom: 1em;
+    margin: 2%;
+}
+
+.cards h2 {
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0.5em 1em;
+}
+
+.cards .inner {
+    padding: 0.5em 1em;
+}
+
+.sidebar {
+    background-color: #333;
+    border: 5px solid #000;
+    padding: 0.5em 1em;
+    color: #fff;
+    margin-top: 1em;
+    width: 60em;
+}
+
+/* Responsive Stuff Here! */
+
+@media screen and (max-width: 768px) {
+    header {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .cards li {
+      width: calc(50% - 1em);
+    }
+  }
+  
+@media screen and (max-width: 480px) {
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    .cards li {
+        width: 100%;
+    }
+}
+  
